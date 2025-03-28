@@ -5,6 +5,7 @@ RUN apt-get update -y && apt-get install -y \
     python3-pip \
     git
 
+RUN echo which python3
 RUN python3 -m venv .venv
 RUN source .venv/bin/activate
 RUN pip3 install PyYAML
