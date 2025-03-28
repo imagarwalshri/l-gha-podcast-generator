@@ -7,7 +7,7 @@ RUN apt-get update -y && apt-get install -y \
 
 RUN python3 -m venv .venv --without-pip --system-site-packages
 RUN . .venv/bin/activate
-RUN python3 -m pip install PyYAML
+RUN .venv/bin/python3 -m pip install PyYAML
 COPY feed.py /usr/bin/feed.py
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT [ "/entrypoint.sh" ]
